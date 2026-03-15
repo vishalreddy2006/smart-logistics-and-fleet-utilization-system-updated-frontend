@@ -38,7 +38,7 @@ export default function App() {
       <Routes>
 
         {/* Public Routes */}
-        <Route path="/" element={<LoginPage />} />
+        <Route path="/" element={<Navigate to="/login" replace />} />
         <Route path="/login" element={<LoginPage />} />
 
         {/* Protected Routes */}

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import { login, signup } from '../api/api';
 
 export default function LoginPage() {
+  const navigate = useNavigate();
   const [mode, setMode] = useState('login');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
@@ -31,7 +32,7 @@ export default function LoginPage() {
         const res = await login(email, password);
         localStorage.setItem('token', res.data.token);
         localStorage.setItem('userEmail', email);
-        window.location.href = '/dashboard';
+        navigate('/dashboard', { replace: true });
       } else {
         await signup(email, phoneNumber, password);
         setSuccessMsg('Account created! Please sign in.');
