@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: 'https://smart-logistics-and-fleet-utilization-system-bac-production.up.railway.app/api',
 });
 
 // Attach JWT token to every request
@@ -23,7 +23,7 @@ api.interceptors.response.use(
     if (error.response?.status === 401) {
       localStorage.removeItem('token');
       localStorage.removeItem('userEmail');
-      window.location.href = '/login';
+      window.location.replace('/#/login');
     }
     return Promise.reject(error);
   }

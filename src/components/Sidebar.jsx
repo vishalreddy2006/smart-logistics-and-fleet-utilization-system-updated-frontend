@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const NAV_ITEMS = [
   { path: '/dashboard', icon: '📊', label: 'Operations Dashboard' },
@@ -11,12 +11,10 @@ const NAV_ITEMS = [
 ];
 
 export default function Sidebar() {
-  const navigate = useNavigate();
-
   const handleLogout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('userEmail');
-    navigate('/login', { replace: true });
+    window.location.href = '/login';
   };
 
   return (
