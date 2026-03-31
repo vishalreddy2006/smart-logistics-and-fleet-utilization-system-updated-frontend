@@ -2,7 +2,7 @@
   "name": "logistics-frontend",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://vishalreddy2006.github.io/smart-logistics-and-fleet-utilization-system_front-end",
+  "homepage": "https://github.com/vishalreddy2006/smart-logistics-and-fleet-utilization-system-updated-frontend",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
