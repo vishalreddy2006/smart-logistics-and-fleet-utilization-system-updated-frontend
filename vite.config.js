@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/smart-logistics-and-fleet-utilization-system_front-end/',
+  base: './',
   server: {
     port: 3000,
     proxy: {
